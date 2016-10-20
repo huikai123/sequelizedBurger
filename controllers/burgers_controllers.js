@@ -1,4 +1,4 @@
-var burgers = require ('../models/')["burger"];
+var burgers = require ('../models/')["burgers"];
 var express = require('express');
 var router = express.Router();
 
@@ -11,7 +11,7 @@ router.get('/burgers', function (req, res) {
 	.then(function(burger_data){
 		console.log(burger_data);
 		return res.render('index', {burger_data});
-	})
+	});
 });
 
 router.post('/burgers/create', function (req, res) {
@@ -28,7 +28,7 @@ router.put('/burgers/update', function (req, res) {
 		return thisBurger.updateAttributes({
 			devoured:true
 		}).then(function(){
-			res.redirect('/');
+			res.redirect('/burgers');
 		})
 	})
 });
