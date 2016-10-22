@@ -7,6 +7,12 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
+  },{
+  	classMethods: {
+  		associate: function(models){
+  			//associations can be defined here
+  		}
+  	}
   });
   return Burger;
 };
