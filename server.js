@@ -31,6 +31,6 @@ app.use('/', routes);
 
 var port = process.env.PORT || 3000;
 app.listen(port);
-
+console.log("listen to port:" +  port);
 console.log(module.exports);
 
